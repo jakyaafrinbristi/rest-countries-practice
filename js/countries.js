@@ -19,7 +19,7 @@ const showData = (countries) => {
     console.log(country.currencies)
     const card = document.createElement('div');
     card.innerHTML = `<div class="card w-full bg-base-100 shadow-2xl">
-    <figure><img class="w-full h-40"  src="${country.flags.png}" alt="Shoes" /></figure>
+    <figure><img class="w-full h-40"  src="${country.flags.png}"/></figure>
     <div class="card-body">
       <h2 class="card-title">
         ${country.name.common}
@@ -55,14 +55,14 @@ const getDetailsData=(id)=>{
     const div=document.createElement('div');
     div.classList.add("modal-box");
     div.innerHTML=`
-    <img class="w-full h-40"  src="${singleCountryData.flags.png}" alt="Shoes" />
+    <img   src="${singleCountryData.flags.png}" alt="Shoes" />
     <div class="card-body">
       <h2 class="card-title">
         ${singleCountryData.name.common}
         
       </h2>
       <p class="text-xl">  Capital: ${singleCountryData?.capital ? singleCountryData?.capital[0]: "Not Found"}</p>
-      <p class="text-xl">Population:${singleCountryData.population}</p>
+      <p><span class="text-xl">Population:</span>${singleCountryData.population}</p>
       <p class="text-xl">Currency:${singleCountryData.currencies ? Object.keys(singleCountryData.currencies)[0] : "Not Found"
       }</p>
     <div class="modal-action">
